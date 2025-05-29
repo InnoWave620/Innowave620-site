@@ -1,29 +1,72 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Home: React.FC = () => {
+function Home() {
   const { t } = useTranslation();
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section className="min-h-screen w-screen bg-neutral-950 flex flex-col items-center justify-center m-0 p-0">
-      <motion.h1
-        className="text-5xl md:text-7xl font-extrabold bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-600 bg-clip-text text-transparent drop-shadow-lg mb-4"
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+    <div className="relative w-full min-h-screen flex items-start justify-center font-sans overflow-hidden pt-0 px-4 py-16 md:py-0">
+      {/* Unified glass container for both content and image */}
+      <div
+        className="relative z-10 w-full md:w-[95%] min-h-[500px] md:h-[75%] backdrop-blur-md bg-white/10 rounded-lg flex flex-col md:flex-row overflow-hidden px-4 md:px-8 py-6 md:py-4 space-y-6 md:space-y-0 md:space-x-6 mt-16 md:mt-0"
+        data-aos="fade-up"
       >
-        {t('welcome')}
-      </motion.h1>
-      <motion.p
-        className="text-xl md:text-2xl text-neutral-300 max-w-2xl mx-auto mb-8"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-      >
-        {t('description')}
-      </motion.p>
-    </section>
+        {/* Top-right Signature-style text inside glass */}
+        <div className="absolute top-2 right-4 z-20" data-aos="fade-left">
+          <h2 className="text-white text-sm md:text-xl lg:text-2xl font-bold italic font-['Playfair_Display'] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] whitespace-normal md:whitespace-nowrap">
+            <span className="text-yellow-300">{t('Your Globally Trusted')}</span>
+            <span className="text-yellow-100"> {t('Tech Solutions')}</span>
+          </h2>
+        </div>
+
+        {/* Left content */}
+        <div className="flex flex-col justify-center w-full md:w-1/2 space-y-4 md:space-y-2" data-aos="fade-right">
+          <h1 className="mb-4 md:mb-8 text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+            <span className="text-yellow-400">Inno</span>
+            <span className="text-yellow-500">Wave</span>
+            <span className="text-black">620</span>
+          </h1>
+
+          <p className="text-sm md:text-lg lg:text-xl font-bold leading-snug text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
+            {t('Your premier')} <span className="text-yellow-300">{t('IT partner')}</span>, {t('crafting')}
+            <span className="text-yellow-200"> {t('bespoke digital solutions')}</span> {t('with innovation and elegance')}.
+          </p>
+
+          <ul className="text-xs md:text-base lg:text-lg font-medium leading-snug text-white space-y-1 list-disc pl-5 drop-shadow-sm grid grid-cols-2 md:grid-cols-1">
+            <li><span className="text-yellow-300">{t('Web Development')}</span></li>
+            <li><span className="text-yellow-300">{t('Mobile Development')}</span></li>
+            <li><span className="text-yellow-300">{t('IT Support')}</span></li>
+            <li><span className="text-yellow-300">{t('API Management')}</span></li>
+            <li><span className="text-yellow-300">{t('Troubleshooting')}</span></li>
+            <li><span className="text-yellow-300">{t('Cybersecurity')}</span></li>
+          </ul>
+
+          {/* Styled button */}
+          <a
+            href="#contact"
+            className="mt-4 md:mt-8 px-4 py-2 md:py-3 text-base md:text-lg font-bold text-white bg-yellow-500 rounded-full shadow-lg hover:bg-grey-400 hover:shadow-black-500/50 transition-all duration-300 ease-in-out w-fit"
+            data-aos="zoom-in"
+          >
+            {t('Start Your Journey')}
+          </a>
+        </div>
+
+        {/* Right image */}
+        <div className="relative w-full md:w-1/2 h-48 md:h-full flex items-end justify-center" data-aos="fade-left">
+          <img
+            src="/future.png"
+            alt={t('Future Illustration')}
+            className="w-full md:w-[130%] h-auto object-contain md:translate-y-3"
+          />
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
 export default Home;

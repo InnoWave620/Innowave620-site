@@ -12,18 +12,28 @@ import { useTranslation } from 'react-i18next';
 
 function App() {
   return (
-    <div className="min-h-screen w-screen flex flex-col bg-neutral-950 text-white font-sans">
-      <Header />
-      <main className="flex-1 w-full px-4 py-8">
-        <section id="home"><Home /></section>
-        <section id="about"><About /></section>
-        <section id="services"><Services /></section>
-        <section id="testimonials"><Testimonials /></section>
-        <section id="contact"><Contact /></section>
-        <section id="team"><Team /></section>
-      </main>
-      <Footer />
-      <Chatbot />
+    <div className="app-root min-h-screen w-screen flex flex-col text-white font-sans relative">
+      <video
+        className="background-video"
+        src="/background.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="app-content relative z-10">
+        <Header />
+        <main className="flex-1 w-full px-4 py-8">
+          <section id="home"><Home /></section>
+          <section id="about"><About /></section>
+          <section id="services"><Services /></section>
+          <section id="testimonials"><Testimonials /></section>
+          <section id="contact"><Contact /></section>
+          <section id="team"><Team /></section>
+        </main>
+        <Footer />
+        <Chatbot />
+      </div>
     </div>
   );
 }
