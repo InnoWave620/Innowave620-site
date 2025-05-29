@@ -1,11 +1,46 @@
-# React + TypeScript + Vite
+# InnoWave620 Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Environment Variables
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project uses environment variables to securely store sensitive information like API keys. Follow these steps to set up your environment:
+
+1. Create a `.env` file in the root directory of the project
+2. Add your environment variables to the `.env` file using the format shown in `.env.example`
+
+```
+VITE_GROQ_API_KEY=your_groq_api_key_here
+```
+
+**Important:** Never commit your `.env` file to version control. It's already added to `.gitignore` to prevent accidental commits.
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## Technology Stack
+
+- React with TypeScript
+- Vite for fast development and building
+- Tailwind CSS for styling
+- React Router for navigation
+- Groq API for the chatbot functionality
 
 ## Expanding the ESLint configuration
 

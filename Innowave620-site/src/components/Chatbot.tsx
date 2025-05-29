@@ -60,7 +60,7 @@ const Chatbot: React.FC = () => {
   useEffect(() => {
     const checkApiKeyValidity = async () => {
        try {
-         const apiKey = "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";
+         const apiKey = import.meta.env.VITE_GROQ_API_KEY || "";
         
         if (!apiKey || apiKey === "YOUR_API_KEY_HERE") {
           setApiKeyValid(false);
@@ -126,7 +126,7 @@ const Chatbot: React.FC = () => {
     // Call Groq API for AI-powered response
     try {
       // Check if API key is valid (not empty or placeholder)
-       const apiKey = "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";
+       const apiKey = import.meta.env.VITE_GROQ_API_KEY || "";
       
       if (!apiKey || apiKey === "YOUR_API_KEY_HERE") {
         setApiKeyValid(false);
