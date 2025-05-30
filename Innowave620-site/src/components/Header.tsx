@@ -13,14 +13,14 @@ const Header: React.FC = () => {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <img
-          src="src/assets/images/logo.png"
+          src={`${import.meta.env.BASE_URL}images/logo.png`}
           alt="InnoWave620 Logo"
           className="h-16 w-auto object-contain"
         />
       </div>
 
       {/* Mobile Menu Button */}
-      <button 
+      <button
         className="md:hidden text-white focus:outline-none z-50"
         onClick={toggleMenu}
         aria-label="Toggle menu"
@@ -36,24 +36,6 @@ const Header: React.FC = () => {
         <a href="#team" className="hover:text-yellow-400 transition-colors duration-200">Team</a>
         <a href="#testimonials" className="hover:text-yellow-400 transition-colors duration-200">Testimonials</a>
         <a href="#contact" className="hover:text-yellow-400 transition-colors duration-200">Contact</a>
-
-        {/* Language Selector
-        <select
-          onChange={(e) => changeLanguage(e.target.value)}
-          className="px-2 py-1 rounded bg-neutral-900 text-white text-base border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-          defaultValue={i18n.language}
-        >
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-          <option value="es">Español</option>
-          <option value="de">Deutsch</option>
-          <option value="zh">中文</option>
-          <option value="it">Italiano</option>
-          <option value="ru">Русский</option>
-          <option value="ar">العربية</option>
-          <option value="hi">हिन्दी</option>
-          <option value="ja">日本語</option>
-        </select> */}
       </nav>
 
       {/* Mobile Navigation */}
