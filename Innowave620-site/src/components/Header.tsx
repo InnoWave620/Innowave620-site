@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header: React.FC = () => {
-  const { i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -19,7 +13,7 @@ const Header: React.FC = () => {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <img
-          src="/innowave620%20logo-Photoroom.png"
+          src="src/assets/images/logo.png"
           alt="InnoWave620 Logo"
           className="h-16 w-auto object-contain"
         />

@@ -213,7 +213,7 @@ const Chatbot: React.FC = () => {
         <div className="absolute bottom-24 right-0 w-80 max-w-[95vw] bg-gradient-to-br from-neutral-900 to-neutral-800 border border-yellow-400 rounded-xl shadow-2xl z-50 flex flex-col overflow-hidden transform transition-all duration-300 ease-in-out scale-100 hover:scale-105 animate-fadeInUpBig">
           <div className="p-4 border-b border-yellow-400 bg-yellow-400 text-neutral-950 font-extrabold text-lg flex items-center justify-between animate-pulseOnce">
             <div className="flex items-center gap-2">
-              <img src="/8888887_robot_automation_icon.png" alt="AI Assistant" className="w-8 h-8" />
+              <img src="src\assets\images\8888887_robot_automation_icon.png" alt="AI Assistant" className="w-8 h-8" />
               <span>InnoWave620 Assistant</span>
               {apiKeyValid === false && (
                 <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">

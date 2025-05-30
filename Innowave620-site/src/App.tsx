@@ -8,7 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import './App.css';
-import { useTranslation } from 'react-i18next';
+
 
 function App() {
   return (

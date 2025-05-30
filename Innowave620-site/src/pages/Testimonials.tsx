@@ -14,10 +14,10 @@ const testimonials = [
     company: "Mkhize Logistics",
   },
   {
-    name: "Amanda Ndlovu",
+    name: "Rachelle Hamalainen",
     feedback:
-      "Excellent service and attention to detail. Our website is now faster, more beautiful, and easier to use.",
-    company: "Ndlovu Boutique",
+      "They built me my beautiful modern looking luxurious fitness company website.",
+    company: "ELITE TRAINING",
   },
 ];
 

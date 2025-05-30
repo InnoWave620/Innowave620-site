@@ -1,4 +1,5 @@
-const resources = {
+// Translation resources
+export const translationResources = {
   en: {
     translation: {
       welcome: 'Welcome to InnoWave620',
@@ -8,7 +9,7 @@ const resources = {
       inn: 'Inno',
       wave: 'Wave',
       '620': '620',
-      description: 'Your premier IT partner, crafting bespoke digital solutions with innovation and elegance.',
+      tagline: 'Your premier IT partner, crafting bespoke digital solutions with innovation and elegance.',
       web_development: 'Web Development',
       mobile_development: 'Mobile Development',
       it_support: 'IT Support',

@@ -1,33 +1,34 @@
 import React from "react";
+import founderImage from "../assets/images/founder.jpg"; // Adjust this path based on your file location
 
 const teamMembers = [
   {
     name: "Senzo Shinga",
     role: "Founder & CEO",
     bio: "Founder and CEO of InnoWave620, dedicated to delivering innovative technology solutions and premium digital experiences.",
-    image: "/founder.jpg" // Local image from public folder
-  }
+    image: founderImage,
+  },
 ];
 
 const Team: React.FC = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center py-16 text-yellow-500">
-      <section className="w-full max-w-3xl px-8 flex flex-col items-center justify-center">
-        <h2 className="text-4xl font-bold mb-10 text-yellow-400">Meet Our Founder</h2>
-        <div className="flex justify-center w-full">
+    <div className="w-full bg-cover bg-center flex flex-col items-center justify-center py-16">
+      <section className="relative z-10 min-h-[60vh] w-full flex flex-col items-center justify-center p-8">
+        <h2 className="text-4xl font-bold mb-8 text-yellow-400">Meet Our Founder</h2>
+        <div className="flex justify-center w-full max-w-2xl">
           {teamMembers.map((member) => (
             <div
               key={member.name}
-              className="rounded-xl border border-yellow-500 p-6 flex flex-col items-center text-center shadow-md hover:shadow-yellow-500/20 transition-shadow duration-300"
+              className="rounded-lg shadow-lg p-6 border border-neutral-800 flex flex-col items-center"
             >
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-28 h-28 rounded-full mb-4 border-4 border-yellow-400 object-cover"
+                className="w-24 h-24 rounded-full mb-4 border-4 border-yellow-400 object-cover"
               />
-              <h3 className="text-2xl font-semibold mb-1 text-yellow-400">{member.name}</h3>
-              <p className="text-md mb-2 text-yellow-300">{member.role}</p>
-              <p className="text-sm text-yellow-100 max-w-md">{member.bio}</p>
+              <h3 className="text-xl font-semibold mb-1 text-amber-400">{member.name}</h3>
+              <p className="text-sm mb-2 text-white">{member.role}</p>
+              <p className="text-center text-white">{member.bio}</p>
             </div>
           ))}
         </div>

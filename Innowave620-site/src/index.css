@@ -48,7 +48,7 @@ body,
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-image: url('/innobg3.jpg');
+  background-image: url('src/assets/images/innobg3.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
