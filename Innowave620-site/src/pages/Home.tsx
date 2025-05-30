@@ -13,7 +13,7 @@ function Home() {
   return (
     <div className="relative w-full min-h-screen flex items-start justify-center font-sans overflow-hidden pt-0 px-4 pb-4 md:pb-0">
       <div
-        className="relative z-10 w-full md:w-[95%] min-h-[500px] md:h-[85vh] backdrop-blur-md bg-white/10 rounded-lg flex flex-col md:flex-row overflow-hidden px-4 md:px-8 py-6 md:py-4 space-y-6 md:space-y-0 md:space-x-6 mt-4"
+        className="relative z-10 w-full md:w-[95%] min-h-[600px] md:h-[85vh] backdrop-blur-md bg-white/10 rounded-lg flex flex-col md:flex-row overflow-visible px-4 md:px-8 py-6 md:py-4 space-y-6 md:space-y-0 md:space-x-6 mt-4"
         data-aos="fade-up"
       >
         {/* Signature Text */}
@@ -28,8 +28,8 @@ function Home() {
         </div>
 
         {/* Left Content */}
-        <div className="flex flex-col justify-start w-full md:w-1/2 space-y-4 md:space-y-2 mt-16 md:mt-6" data-aos="fade-right">
-          <h1 className="mb-4 md:mb-8 text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+        <div className="flex flex-col justify-start w-full md:w-1/2 space-y-4 md:space-y-2 mt-24 md:mt-6 overflow-visible" data-aos="fade-right">
+          <h1 className="mb-4 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
             <span className="text-yellow-400">Inno</span>
             <span className="text-yellow-500">Wave</span>
             <span className="text-black">620</span>
