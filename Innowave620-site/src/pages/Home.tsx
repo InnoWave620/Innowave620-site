@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 
 function Home() {
   const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -60,7 +61,7 @@ function Home() {
         {/* Right Image */}
         <div className="relative w-full md:w-1/2 h-48 md:h-full flex items-end justify-center" data-aos="fade-left">
           <img
-            src="src/assets/images/future.png"
+            src={`${import.meta.env.BASE_URL}images/future.png`}
             alt={t('Future Illustration')}
             className="w-full md:w-[130%] h-auto object-contain md:translate-y-3"
           />
