@@ -9,18 +9,9 @@ import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import './App.css';
 
-
 function App() {
   return (
     <div className="app-root min-h-screen w-screen flex flex-col text-white font-sans relative">
-      <video
-        className="background-video"
-        src="/background.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
       <div className="app-content relative z-10">
         <Header />
         <main className="flex-1 w-full px-4 py-8">
