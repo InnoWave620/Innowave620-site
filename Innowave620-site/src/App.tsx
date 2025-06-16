@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -9,7 +10,21 @@ import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import './App.css';
 
+// Import AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function App() {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out',
+      once: true,
+      mirror: false,
+      disable: 'phone' // Disable animations on phones
+    });
+  }, []);
   return (
     <div className="app-root min-h-screen w-screen flex flex-col text-white font-sans relative">
       <div className="app-content relative z-10">
