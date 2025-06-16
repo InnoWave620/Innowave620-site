@@ -11,7 +11,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "preview:worker": "npm run build && wrangler dev",
-    "deploy:worker": "npm run build && wrangler deploy"
+    "deploy:worker": "npm run build && wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "pages:build": "npx @cloudflare/next-on-pages"
     },
   "dependencies": {
     "@formspree/react": "^3.0.0",
