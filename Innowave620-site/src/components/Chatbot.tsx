@@ -240,23 +240,26 @@ const Chatbot: React.FC = () => {
               )}
               <div ref={messagesEndRef} />
             </div>
-            <div className="p-2 border-t border-neutral-800 flex gap-2 bg-neutral-900">
-              <input
-                type="text"
-                className="flex-1 px-3 py-2 rounded-full bg-neutral-800 text-white border border-neutral-700 focus:outline-none focus:border-yellow-400 transition-all duration-200"
-                placeholder="Type your message..."
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-              />
-              <button
-                className="bg-yellow-400 text-neutral-950 px-4 py-2 rounded-full hover:bg-yellow-500 font-semibold transition-all duration-200 transform hover:scale-105"
-                onClick={handleSend}
-                disabled={!input.trim()}
-              >
-                Send
-              </button>
-            </div>
+            <div className="p-2 border-t border-neutral-800 flex gap-2 bg-neutral-900 w-full"
+     style={{ minHeight: '56px', boxSizing: 'border-box' }}>
+  <input
+    type="text"
+    className="flex-1 px-3 py-2 rounded-full bg-neutral-800 text-white border border-neutral-700 focus:outline-none focus:border-yellow-400 transition-all duration-200 min-w-0"
+    placeholder="Type your message..."
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+    onKeyDown={handleKeyDown}
+    style={{ fontSize: '1rem' }}
+  />
+  <button
+    className="bg-yellow-400 text-neutral-950 px-4 py-2 rounded-full hover:bg-yellow-500 font-semibold transition-all duration-200 transform hover:scale-105 whitespace-nowrap"
+    onClick={handleSend}
+    disabled={!input.trim()}
+    style={{ fontSize: '1rem', minWidth: '64px' }}
+  >
+    Send
+  </button>
+</div>
           </div>
         )}
       </div>
