@@ -1,3 +1,4 @@
+"use client";
 import { Text3D, Center } from "@react-three/drei"
 import { useRef } from "react"
 import { useFrame } from "@react-three/fiber"

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 // Import the robot icon directly
 import robotIcon from "../assets/images/8888887_robot_automation_icon.png";
